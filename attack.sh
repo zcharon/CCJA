@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=2 python3 attack.py  \
+    --pretrained_model Meta/Llama2-7b-chat-hf\
+    --mlm_model bert\
+    --save_file_name CCJA-Llama2\
+    --file_path results/CCJA-Llama2.csv\
+    --device 'cuda:0'\
+    --mlm_model 'cuda:0'\
+    --start 0\
+    --end 10\
+    --repeat_nums 3\
+    --iter_nums 1200\
+    --perturb_layer_index 7\
+    --lr 0.1\
+	--seed 12 \
